@@ -35,4 +35,13 @@ class City
     {
         return $this->population;
     }
+
+    public function getInfo()
+    {
+        return ("City: <br/>" .
+            "Name " . $this->getName() . "<br />" .
+            "Foundation " . $this->getFoundation() . "<br />" .
+            "Population " . $this->getPopulation() . "<br />" .
+            "---------------------------" . "<br />");
+    }
 }

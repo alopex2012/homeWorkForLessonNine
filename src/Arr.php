@@ -4,12 +4,18 @@ class Arr
 {
     private $numbers = [];
 
+    public function getNumbers()
+    {
+        return $this->numbers;
+    }
+
     public function add($array)
     {
         for ($i = 0; $i < count($array); $i++) {
             $this->numbers[] = $array[$i];
         }
     }
+
     public function getSum()
     {
         return array_sum($this->numbers);
