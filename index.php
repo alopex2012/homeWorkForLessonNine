@@ -32,14 +32,13 @@
 
 
     $array = [3, 5, 7, 9, 11];
-    $newArr = new Arr();
+    $newArr = new Arr(); //create an instance of the class
     $newArr->add($array);
     print_r($newArr->getNumbers());
     echo "<br />";
-    //foreach ($newArr->numbers as $number)
+
     echo "Cума чисел масива " . $newArr->getSum() . "<br />";
     echo "Cереднє арифметичне чисел масива " . $newArr->getAvg() . "<br />";
-
 
     echo "<hr />";
 
@@ -51,15 +50,15 @@
     ",
     "</pre>";
 
-    $newCity = new City();
+    $newCity = new City(); //create an instance of the class
     $newCity->setName("Kyiv");
     $newCity->setFoundation(430);
-    $newCity->setPopulation(2500000);
-    echo $newCity->getInfo();
+    $newCity->setPopulation(2900000);
+    echo $newCity->getInfo(); //display information about the object
     $props = ["name", "foundation", "population"];
-    foreach ($props as $item) {
-        $prop = ucfirst($item);
-        echo $newCity->{"get{$prop}"}() . "<br />";
+    foreach ($props as $prop) {
+        $item = ucfirst($prop);
+        echo "{$item} " . $newCity->{"get{$item}"}() . "<br />";
     }
 
     echo "<hr />";
@@ -73,11 +72,11 @@
     ",
     "</pre>";
 
-    $newUser = new User("Mike", 37);
-    echo $newUser->getInfo();
+    $newUser = new User("Mike", 37); //create an instance of the class
+    echo $newUser->getInfo();  //display information about the object
     $methods = ['method1' => 'getName', 'method2' => 'getAge'];
-    echo $newUser->{$methods['method1']}() . "<br />";
-    echo $newUser->{$methods['method2']}() . "<br />";
+    echo "Name " . $newUser->{$methods['method1']}() . "<br />";
+    echo "Age " . $newUser->{$methods['method2']}() . "<br />";
 
     echo "<hr />";
 
