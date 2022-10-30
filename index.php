@@ -9,6 +9,7 @@
     <style>
         body {
             max-width: 800;
+            color: darkblue;
         }
     </style>
 </head>
@@ -30,11 +31,10 @@
         ",
     "</pre>";
 
-
     $array = [3, 5, 7, 9, 11];
     $newArr = new Arr(); //create an instance of the class
     $newArr->add($array);
-    print_r($newArr->getNumbers());
+    print_r($newArr->getNumbers()); //display array information
     echo "<br />";
 
     echo "Cума чисел масива " . $newArr->getSum() . "<br />";
@@ -57,7 +57,7 @@
     echo $newCity->getInfo(); //display information about the object
     $props = ["name", "foundation", "population"];
     foreach ($props as $prop) {
-        $item = ucfirst($prop);
+        $item = ucfirst($prop); // capitalize the first letter of the string
         echo "{$item} " . $newCity->{"get{$item}"}() . "<br />";
     }
 
